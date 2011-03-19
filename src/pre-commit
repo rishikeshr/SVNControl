@@ -1,0 +1,10 @@
+#!/bin/sh
+
+REPOS="$1"
+TXN="$2"
+
+CONFIGFILE="/opt/svn/svn-controls/svn-acl-conf.cfg"
+
+/opt/svn/svn-controls/SVNHook.py "$REPOS" $TXN $CONFIGFILE
+
+exit $?
